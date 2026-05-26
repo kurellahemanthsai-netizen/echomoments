@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: whitesmoke;
+  position: sticky;
+  top: 0;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.navbar img {
+  width: 50px;
+  height: 50px;
+}
+.navbar a {
+  color: #219ebc;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: x-large;
+}
+.navbar span {
+  color: #e63946;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 25px;
+}
+nav a {
+  text-decoration: none;
+  color: #219ebc;
+  font-weight: 500;
+}
+nav a:hover {
+  color: #e63946;
+}
+.login {
+  height: 40px;
+  width: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e63946;
+  color: white;
+  border: none;
+  font-weight: 600;
+  border-radius: 8px;
+}
+.login:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+.hero {
+  background-image: url(images/img-1.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 92vh;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  align-items: center;
+  display: flex;
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 1;
+}
+.hero_content {
+  z-index: 2;
+  position: relative;
+  margin-left: 50px;
+  width: 50%;
+}
+.hero_content h1 {
+  font-size: 50px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.hero_content p {
+  margin-bottom: 30px;
+}
+.hero_button button {
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+   font-weight: 600;
+  border-radius: 8px;
+}
+.lm {
+  background-color: #e63946;
+  color: white;
+  border: none;
+  margin-right: 10px;
+}
+.lm:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.bn {
+  background-color: transparent;
+  color: #e63946;
+  border: 1px solid #e63946;
+}
+.bn:hover {
+  background-color: #e63946;
+  color: white;
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: 0.3s;
+}
