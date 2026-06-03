@@ -204,6 +204,8 @@ nav ul li a:hover{
 .login:hover{
   transform:scale(1.05);
 }
+/* HERO */
+
 .hero{
   width:100%;
   min-height:90vh;
@@ -211,14 +213,17 @@ nav ul li a:hover{
   position:relative;
 
   display:flex;
-  align-items:center;
+  justify-content:center; /* Horizontal center */
+  align-items:center;     /* Vertical center */
 
   padding:0 8%;
 
-  background-image:url(images/img-5.jpg);
+  background-image:url(images/img-9.avif);
   background-position:center;
   background-size:cover;
   background-repeat:no-repeat;
+
+  text-align:center; /* Centers text */
 }
 
 .overlay{
@@ -247,67 +252,222 @@ nav ul li a:hover{
   line-height:1.9;
   margin-bottom:30px;
 }
-
-
-.service-row{
-    display:flex;
-    align-items:center;
-    gap:60px;
-    margin-bottom:100px;
+.location{
+background:var(--light);
 }
 
-.reverse{
-    flex-direction:row-reverse;
+.location_content{
+display:flex;
+align-items:center;
+gap:60px;
 }
 
-.service-image,
-.service-content{
-    flex:1;
+.location_text{
+flex:1;
 }
 
-.service-image{
-    overflow:hidden;
-    border-radius:20px;
+.location_text h2{
+font-size:42px;
+color:var(--primary);
+margin-bottom:20px;
 }
 
-.service-image img{
-    width:100%;
-    height:420px;
-    object-fit:cover;
-    transition:.5s;
+.location_text p{
+line-height:1.9;
+margin-bottom:15px;
+color:black;
 }
 
-.service-image:hover img{
-    transform:scale(1.08);
+.location_image{
+flex:1;
 }
 
-.service-content h2{
-    color:var(--primary);
-    font-size:40px;
-    margin-bottom:20px;
+.location_image img{
+border-radius:25px;
+}
+/* WHY US */
+
+.why_grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
 }
 
-.service-content p{
-    line-height:1.9;
-    margin-bottom:20px;
+.why_box{
+background:whitesmoke;
+color:black;
+padding:35px;
+border-radius:20px;
+transition:.4s;
 }
 
-.service-content ul{
-    padding-left:20px;
+.why_box:hover{
+transform:scale(1.05);
 }
 
-.service-content ul li{
-    margin-bottom:12px;
+.why_box h3{
+margin-bottom:15px;
+color: var(--secondary);
+}
+/* MAP */
+.section_title{
+text-align:center;
+margin-bottom:60px;
 }
 
+.section_title h2{
+font-size:42px;
+color:var(--primary);
+margin-bottom:15px;
+}
 
+.section_title p{
+max-width:700px;
+margin:auto;
+line-height:1.8;
+color:black;
+}
 
+.map_wrapper{
+display:grid;
+grid-template-columns:1fr 2fr;
+gap:40px;
+align-items:center;
+}
 
+.map_info{
+/* background-color:#7dc9e754; */
+background-color: whitesmoke;
+color:black;
+padding:40px;
+border-radius:25px;
+}
 
+.map_info h3{
+font-size:30px;
+margin-bottom:20px;
+}
+.echo{
+  color: var(--primary);
+}
+.moments{
+  color: var(--secondary);
+}
+.map_info p{
+margin-bottom:15px;
+line-height:1.8;
+}
 
+.map_info button{
+margin-top:15px;
+padding:14px 30px;
+border:none;
+border-radius:8px;
+background:var(--secondary);
+color:white;
+cursor:pointer;
+font-weight:600;
+transition:.3s;
+}
 
+.map_info button:hover{
+transform:translateY(-5px);
+}
 
+.map_frame iframe{
+width:100%;
+height:450px;
+border:none;
+border-radius:25px;
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
 
+.contact_wrapper{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.contact_image img{
+height:500px;
+object-fit:cover;
+border-radius:25px;
+}
+
+.contact_form{
+background:#f8f9fa;
+padding:40px;
+border-radius:25px;
+}
+
+.contact_form h2{
+color:var(--primary);
+margin-bottom:25px;
+}
+
+.contact_form input,
+.contact_form textarea{
+width:100%;
+padding:15px;
+margin-bottom:20px;
+border:1px solid #ddd;
+border-radius:10px;
+outline:none;
+}
+
+.contact_form textarea{
+height:140px;
+resize:none;
+}
+
+.contact_form button{
+padding:14px 30px;
+border:none;
+border-radius:8px;
+background:var(--secondary);
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:.3s;
+}
+
+.contact_form button:hover{
+transform: translateY(-5px);
+}
+/* CTA */
+
+.cta{
+background:linear-gradient(135deg,var(--primary),#078bbd);
+text-align:center;
+color:white;
+}
+
+.cta h2{
+font-size:50px;
+margin-bottom:20px;
+}
+
+.cta p{
+max-width:700px;
+margin:auto;
+line-height:1.8;
+margin-bottom:30px;
+}
+
+.cta button{
+padding:15px 35px;
+border:none;
+border-radius:8px;
+background:var(--secondary);
+color:white;
+font-weight:600;
+cursor:pointer;
+}
+.cta button:hover{
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
 
 .footer{
   width:100%;
