@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EchoMoments</title>
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="forgot.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="forgot-container">
+      <div class="forgot-card">
+        <!-- THEME + RTL BUTTONS -->
+
+        <div class="theme-wrapper">
+          <!-- THEME BUTTON -->
+
+          <button class="theme-toggle" id="themeToggle">
+            <i class="fa-solid fa-moon"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-moon-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"
+                /></svg></i>
+
+            <span></span>
+          </button>
+
+          <!-- RTL BUTTON -->
+
+          <button class="rtl-toggle" id="rtlToggle">RTL</button>
+        </div>
+
+        <div class="logo" onclick="document.location = 'index.html'">
+          <h1><span>Echo</span><span>Moments</span></h1>
+        </div>
+
+        <div class="forgot-header">
+          <h2>Forgot Password?</h2>
+
+          <p>
+            Enter your registered email address and we'll send you a password
+            reset link.
+          </p>
+        </div>
+
+        <form>
+          <div class="input-group">
+            <span class="icon"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-envelope-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"
+                /></svg></span>
+
+            <input
+              type="email"
+              placeholder="Enter your email address"
+              required
+            />
+          </div>
+
+          <button type="submit" class="reset-btn">Send Reset Link</button>
+        </form>
+
+        <div class="back-login">
+          <a href="login.html"> Back to Login</a>
+        </div>
+      </div>
+    </div>
+    <script src="forgot.js"></script>
+  </body>
+</html>

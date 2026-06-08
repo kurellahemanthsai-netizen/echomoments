@@ -34,19 +34,13 @@ rtlBtn.addEventListener("click", () => {
 const hamburger = document.getElementById("hamburger");
 const closeMenu = document.getElementById("close-menu");
 const nav = document.getElementById("navMenu");
-const overlay = document.getElementById("menu-overlay");
+// const overlay = document.getElementById("menu-overlay");
 
 hamburger.addEventListener("click", () => {
     nav.classList.add("active");
-    overlay.classList.add("active");
 });
 
 closeMenu.addEventListener("click", () => {
     nav.classList.remove("active");
-    overlay.classList.remove("active");
 });
 
-overlay.addEventListener("click", () => {
-    nav.classList.remove("active");
-    overlay.classList.remove("active");
-});

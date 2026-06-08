@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>EchoMoments</title>
+<link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+<link rel="stylesheet" href="clients.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+  rel="stylesheet"
+/>
+</head>
+<body>
+    <!-- SIDEBAR -->
+
+
+<div class="sidebar">
+        <button class="close-sidebar" id="closeSidebar">
+    ✕
+</button>
+     <div class="logo">
+        <img src="images/logo.png" alt="">
+       <a href="index.html"> Echo<span>Moments</span></a>
+    </div>
+
+    <ul class="menu">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="bookings.html">Bookings</a></li>
+        <li><a href="clients.html" class="active">Clients</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="payments.html">Payments</a></li>
+        <li><a href="settings.html">Settings</a></li>
+        <li><a href="logout.html">Logout</a></li>
+    </ul>
+
+</div>
+
+<!-- MAIN -->
+
+<div class="main">
+
+    <!-- TOPBAR -->
+
+  <div class="topbar">
+    <button class="menu-toggle" id="menuToggle">☰</button>
+          <img src="images/admin.avif" alt="Profile" class="profile" />
+
+          <div class="search-box">
+            <input type="text" placeholder="Search here..." />
+          </div>
+
+          <div class="topbar-right">
+            <div class="top-buttons">
+              <!-- THEME BUTTON -->
+
+              <button class="toggle-btn" id="themeToggle">
+                <i class="fa-solid fa-moon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-fill" viewBox="0 0 16 16">
+  <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
+</svg></i>
+
+                <span class="btn-text"></span>
+              </button>
+
+              <!-- RTL BUTTON -->
+
+              <button class="toggle-btn rtl-btn" id="rtlToggle">RTL</button>
+              <button class="bell">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-bell-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"
+                  />
+                </svg>
+                <span>7</span>
+              </button>
+            </div>
+          </div>
+        </div>
+    <!-- CONTENT -->
+
+    <div class="content">
+
+        <!-- HERO -->
+
+        <div class="hero">
+            <h1>Clients Management</h1>
+            <p>Manage client records, bookings, communication and project history.</p>
+        </div>
+
+        <!-- CLIENT STATS -->
+
+        <div class="client-stats">
+
+            <div class="client-card">
+                <h4>Total Clients</h4>
+                <h2>1,245</h2>
+                <span>+12% This Month</span>
+            </div>
+
+            <div class="client-card">
+                <h4>Active Clients</h4>
+                <h2>987</h2>
+                <span>+8% Growth</span>
+            </div>
+
+            <div class="client-card">
+                <h4>New Clients</h4>
+                <h2>68</h2>
+                <span>+18 This Week</span>
+            </div>
+
+            <div class="client-card">
+                <h4>Returning Clients</h4>
+                <h2>523</h2>
+                <span>+15% Increase</span>
+            </div>
+
+        </div>
+
+        <!-- CLIENT TABLE -->
+
+        <div class="clients-table">
+
+            <h2>Client Database</h2>
+
+            <table>
+
+                <tr>
+                    <th>Client</th>
+                    <th>Phone</th>
+                    <th>Projects</th>
+                    <th>Last Booking</th>
+                    <th>Status</th>
+                </tr>
+
+                <tr>
+                    <td>Rahul Sharma</td>
+                    <td>+91 9876543210</td>
+                    <td>12</td>
+                    <td>12 Jun 2026</td>
+                    <td><span class="status active-client">Active</span></td>
+                </tr>
+
+                <tr>
+                    <td>Priya Reddy</td>
+                    <td>+91 9876543211</td>
+                    <td>8</td>
+                    <td>15 Jun 2026</td>
+                    <td><span class="status active-client">Active</span></td>
+                </tr>
+
+                <tr>
+                    <td>Arjun Kumar</td>
+                    <td>+91 9876543212</td>
+                    <td>6</td>
+                    <td>18 Jun 2026</td>
+                    <td><span class="status inactive-client">Inactive</span></td>
+                </tr>
+
+                <tr>
+                    <td>Sneha Patel</td>
+                    <td>+91 9876543213</td>
+                    <td>10</td>
+                    <td>22 Jun 2026</td>
+                    <td><span class="status active-client">Active</span></td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        <!-- TOP CLIENTS -->
+
+        <div class="clients-grid">
+
+            <div class="client-box">
+                <img src="images/c1.avif">
+                <h3>Rahul Sharma</h3>
+                <p>Wedding Client</p>
+                <button class="btn">View Profile</button>
+            </div>
+
+            <div class="client-box">
+                <img src="images/c2.avif">
+                <h3>Priya Reddy</h3>
+                <p>Birthday Events</p>
+                <button class="btn">View Profile</button>
+            </div>
+
+            <div class="client-box">
+                <img src="images/c3.avif">
+                <h3>Arjun Kumar</h3>
+                <p>Pre-Wedding Shoots</p>
+                <button class="btn">View Profile</button>
+            </div>
+
+        </div>
+
+        <!-- ACTIVITY -->
+
+        <div class="client-activity">
+
+            <h2>Recent Client Activity</h2>
+
+            <div class="activity-item">
+                <p>Rahul Sharma booked Wedding Package</p>
+                <span>2 Hours Ago</span>
+            </div>
+
+            <div class="activity-item">
+                <p>Priya Reddy uploaded event requirements</p>
+                <span>5 Hours Ago</span>
+            </div>
+
+            <div class="activity-item">
+                <p>Arjun Kumar completed payment</p>
+                <span>Yesterday</span>
+            </div>
+
+            <div class="activity-item">
+                <p>Sneha Patel requested quote</p>
+                <span>2 Days Ago</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+        © 2026 EchoMoments • Capturing Memories Forever
+    </div>
+
+</div>
+<script src="clients.js"></script>
+</body>
+</html>

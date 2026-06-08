@@ -29,8 +29,6 @@ rtlBtn.addEventListener("click", () => {
     }
 
 });
-
-
 const hamburger = document.getElementById("hamburger");
 const closeMenu = document.getElementById("close-menu");
 const nav = document.getElementById("navMenu");

@@ -5,23 +5,282 @@
   font-family: "Poppins", sans-serif;
 }
 
-:root {
-  --primary: #05668d;
-  --secondary: #ef233c;
+:root{
+  --primary:#05668d;
+  --secondary:#ef233c;
+
+  --bg:#ffffff;
+  --text:#111111;
+  --card:#f5f5f5;
+  --header:#ffffff;
+  --footer:#f5f5f5;
 }
-.dark {
-  --backgroundcolor: white;
-  --color: black;
+
+body.dark{
+  --bg:#0f172a;
+  --text:#f8fafc;
+  --card:#1e293b;
+  --header:#111827;
+  --footer:#111827;
+}
+
+/* BODY */
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+  transition:0.4s ease;
+}
+/* =====================================
+   DARK MODE
+===================================== */
+
+body.dark header{
+  background:#111827;
+}
+
+body.dark nav ul li a{
+  color:white;
+}
+
+body.dark nav ul li a:hover{
+  color:var(--secondary);
+}
+
+body.dark .dropdown_content{
+  background:#1e293b;
+}
+
+body.dark .dropdown_content a{
+  color:white;
+}
+
+body.dark .dropdown_content a:hover{
+  background:#334155;
+}
+
+body.dark .icon_btn{
+  background:#334155;
+  color:white;
+}
+
+body.dark .icon_btn:hover{
+  background:var(--secondary);
+}
+
+body.dark .hero_content h1,
+body.dark .hero_content p{
+  color:white;
+}
+
+body.dark .plan_card{
+  background:#1e293b;
+  color:white;
+}
+
+body.dark .plan_card h3{
+  color:#60a5fa;
+}
+
+body.dark .package_box{
+  background:#1e293b;
+  color:white;
+}
+
+body.dark .package_box h3{
+  color:#60a5fa;
+}
+
+body.dark .time_box{
+  background:#1e293b;
+  color:white;
+}
+
+body.dark .time_box h3{
+  color:#60a5fa;
+}
+
+body.dark .compare{
+  background:#0f172a;
+}
+
+body.dark table{
+  background:#1e293b;
+  color:white;
+}
+
+body.dark td{
+  border-color:#334155;
+}
+
+body.dark .faq_box{
+  background:#1e293b;
+  color:white;
+}
+
+body.dark .faq_box h4{
+  color:#60a5fa;
+}
+
+body.dark .section_title h2{
+  color:#60a5fa;
+}
+
+body.dark .section_title p{
+  color:#cbd5e1;
+}
+
+body.dark .footer{
+  background:#111827;
+}
+
+body.dark .footer_box p,
+body.dark .footer_box1 a,
+body.dark .footer_bottom,
+body.dark .footer_legal a{
+  color:#cbd5e1;
+}
+
+body.dark .footer_bottom{
+  border-top:1px solid #334155;
+}
+
+body.dark .social_icons a{
+  color:white;
+}
+
+body.dark .social_icons a:hover,
+body.dark .footer_box1 a:hover,
+body.dark .footer_legal a:hover{
+  color:var(--secondary);
+}
+
+body.dark .navbar a,
+body.dark .footer_logo a{
+  color:var(--primary);
+}
+
+body.dark .navbar span,
+body.dark .footer_logo span{
+  color:var(--secondary);
+}
+
+/* =====================================
+   RTL SUPPORT
+===================================== */
+
+html[dir="rtl"] body{
+  direction:rtl;
+}
+
+/* Header */
+
+html[dir="rtl"] .navbar,
+html[dir="rtl"] .header_icons,
+html[dir="rtl"] .footer_logo,
+html[dir="rtl"] .social_icons{
+  flex-direction:row-reverse;
+}
+
+html[dir="rtl"] nav ul{
+  flex-direction:row-reverse;
+}
+
+/* Dropdown */
+
+html[dir="rtl"] .drop_btn{
+  flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .dropdown_content{
+  left:auto;
+  right:0;
+  text-align:right;
+}
+
+/* Hero */
+
+html[dir="rtl"] .hero_content{
+  text-align:center;
+}
+
+/* Pricing Cards */
+
+html[dir="rtl"] .plan_card{
+  text-align:right;
+}
+
+html[dir="rtl"] .plan_card ul{
+  padding-right:0;
+}
+
+/* Photography Packages */
+
+html[dir="rtl"] .package_box{
+  text-align:right;
+}
+
+/* Timeline */
+
+html[dir="rtl"] .timeline::before{
+  right:50%;
+  left:auto;
+}
+
+html[dir="rtl"] .left{
+  margin-left:auto;
+  margin-right:0;
+}
+
+html[dir="rtl"] .right{
+  margin-right:auto;
+  margin-left:0;
+}
+
+html[dir="rtl"] .time_box{
+  text-align:right;
+}
+
+/* Table */
+
+html[dir="rtl"] table{
+  direction:rtl;
+}
+
+/* FAQ */
+
+html[dir="rtl"] .faq_box{
+  text-align:right;
+}
+
+/* CTA */
+
+html[dir="rtl"] .cta{
+  text-align:center;
+}
+
+/* Footer */
+
+html[dir="rtl"] .footer_content{
+  text-align:right;
+}
+
+html[dir="rtl"] .footer_bottom{
+  flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .footer_legal{
+  flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .footer_box1 a:hover{
+  padding-right:5px;
+  padding-left:0;
 }
 
 html {
   scroll-behavior: smooth;
-}
-
-body {
-  overflow-x: hidden;
-  background: white;
-  color: var(--text);
 }
 
 section {
@@ -203,6 +462,53 @@ nav ul li a:hover {
 .login:hover {
   transform: scale(1.05);
 }
+/* HAMBURGER */
+
+.hamburger{
+  display:none;
+  font-size:30px;
+  cursor:pointer;
+  color:var(--primary);
+}
+
+.close-menu{
+    display:none;
+
+    position:absolute;
+    top:15px;
+    right:15px;
+
+    width:40px;
+    height:40px;
+
+    border-radius:50%;
+
+    background:var(--secondary);
+    color:white;
+
+    align-items:center;
+    justify-content:center;
+
+    font-size:18px;
+    font-weight:700;
+    line-height:1;
+
+    cursor:pointer;
+
+    z-index:1100;
+}
+
+body.dark .close-menu{
+  color:white;
+}
+
+/* DARK MODE */
+
+body.dark .hamburger,
+body.dark .close-menu{
+  color:white;
+}
+
 /* HERO */
 
 .hero {
@@ -608,4 +914,321 @@ font-weight:600;
 
 .footer_legal a:hover {
   color: var(--secondary);
+}
+/* ===========================
+   MOBILE (Samsung Galaxy S8+)
+=========================== */
+/* Samsung Galaxy S8+ */
+@media screen and (max-width:480px){
+
+*{
+    max-width:100%;
+}
+
+html,
+body{
+    overflow-x:hidden;
+}
+
+section{
+    padding:70px 20px;
+}
+
+header{
+    padding:0 12px;
+}
+
+.navbar img{
+    width:40px;
+    height:40px;
+}
+
+.navbar a{
+    font-size:18px;
+}
+
+.icon_btn{
+    width:32px;
+    height:32px;
+    font-size:10px;
+}
+
+.login{
+    width:65px;
+    height:32px;
+    font-size:11px;
+}
+
+.hero_content h1{
+    font-size:34px;
+}
+
+.hero_content p{
+    font-size:14px;
+}
+
+.plan_wrapper{
+    grid-template-columns:1fr;
+}
+
+.plan_card{
+    padding:30px 20px;
+}
+
+.price{
+    font-size:38px;
+}
+
+.ribbon{
+    right:-30px;
+    padding:6px 35px;
+    font-size:12px;
+}
+
+.package_grid{
+    grid-template-columns:1fr;
+}
+
+.package_box{
+    padding:25px;
+}
+
+.timeline::before{
+    display:none;
+}
+
+.time_box{
+    width:100%;
+    margin-bottom:20px;
+}
+
+.left,
+.right{
+    margin:0;
+}
+
+.section_title h2{
+    font-size:30px;
+}
+
+.cta h2{
+    font-size:34px;
+}
+
+.footer_content{
+    grid-template-columns:1fr;
+    gap:30px;
+}
+
+.footer_logo a{
+    font-size:22px;
+}
+
+.social_icons{
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.footer_bottom{
+    flex-direction:column;
+    text-align:center;
+}
+
+.footer_legal{
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.em{
+    white-space:normal;
+    word-break:break-word;
+}
+
+/* Mobile Menu */
+
+nav{
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:280px;
+    height:100vh;
+    background:var(--bg);
+    transition:.4s ease;
+    z-index:1000;
+    overflow-y:auto;
+}
+
+nav.active{
+    right:0;
+}
+
+nav ul{
+    flex-direction:column;
+    align-items:flex-start;
+    padding:90px 25px;
+    gap:20px;
+}
+
+.dropdown{
+    width:100%;
+}
+
+.dropdown_content{
+    position:static;
+    width:100%;
+    opacity:1;
+    visibility:visible;
+    transform:none;
+    display:none;
+    box-shadow:none;
+    margin-top:10px;
+}
+
+.dropdown:hover .dropdown_content{
+    display:block;
+}
+
+.hamburger{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:24px;
+}
+
+.close-menu{
+    display:flex;
+}
+}
+
+/* ===========================
+   TABLET (iPad Mini)
+=========================== */
+@media screen and (min-width:768px) and (max-width:1024px){
+
+section{
+    padding:80px 40px;
+}
+
+.hero_content h1{
+    font-size:50px;
+}
+
+/* HAMBURGER MENU */
+.hamburger{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.close-menu{
+    display:flex;
+}
+
+nav{
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:320px;
+    height:100vh;
+    background:var(--bg);
+    transition:.4s;
+    z-index:1000;
+}
+
+nav.active{
+    right:0;
+}
+
+nav ul{
+    flex-direction:column;
+    align-items:flex-start;
+    padding:90px 30px;
+    gap:20px;
+}
+
+/* DROPDOWN */
+.dropdown{
+    width:100%;
+}
+
+.dropdown_content{
+    position:static;
+    width:100%;
+    opacity:1;
+    visibility:visible;
+    transform:none;
+    display:none;
+    box-shadow:none;
+}
+
+.dropdown:hover .dropdown_content{
+    display:block;
+}
+
+/* CONTENT */
+.plan_wrapper{
+    grid-template-columns:1fr 1fr;
+}
+
+.package_grid{
+    grid-template-columns:1fr 1fr;
+}
+
+.faq_grid{
+    grid-template-columns:1fr 1fr;
+}
+
+.time_box{
+    width:47%;
+}
+
+.footer_content{
+    grid-template-columns:1fr 1fr;
+}
+}
+
+/* ===========================
+   LARGE TABLET (iPad Pro)
+=========================== */
+@media screen and (min-width:1025px) and (max-width:1366px){
+
+section{
+    padding:90px 60px;
+}
+
+.hero_content h1{
+    font-size:58px;
+}
+
+.plan_wrapper{
+    grid-template-columns:repeat(3,1fr);
+}
+
+.package_grid{
+    grid-template-columns:repeat(3,1fr);
+}
+
+.faq_grid{
+    grid-template-columns:repeat(3,1fr);
+}
+
+.footer_content{
+    grid-template-columns:1.5fr 1fr 1fr 1fr;
+}
+
+/* NORMAL DESKTOP MENU */
+.hamburger{
+    display:none;
+}
+
+.close-menu{
+    display:none;
+}
+
+nav{
+    position:static;
+    width:auto;
+    height:auto;
+    background:none;
+}
 }

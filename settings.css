@@ -1,0 +1,643 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root{
+  --primary:#05668d;
+  --secondary:#ef233c;
+
+  --bg:#ffffff;
+  --text:#111111;
+  --card:#f5f5f5;
+  --header:#ffffff;
+  --footer:#f5f5f5;
+}
+
+body.dark{
+  --bg:#0f172a;
+  --text:#f8fafc;
+  --card:#1e293b;
+  --header:#111827;
+  --footer:#111827;
+}
+
+/* BODY */
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+  transition:0.4s ease;
+}
+
+/* Components in dark mode */
+body.dark .sidebar,
+body.dark .topbar,
+body.dark .settings-card,
+body.dark .preferences {
+  background: var(--card);
+  color: var(--text);
+}
+
+/* Inputs */
+body.dark input {
+  background: #334155;
+  color: #fff;
+  border: 1px solid var(--border);
+}
+
+body.dark input::placeholder {
+  color: #94a3b8;
+}
+
+/* Hero */
+body.dark .hero {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+/* Menu */
+body.dark .menu li a {
+  color: var(--text);
+}
+
+body.dark .menu li a:hover,
+body.dark .menu li a.active {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* Buttons */
+body.dark .toggle-btn,
+body.dark .bell {
+  background: #334155;
+  color: #fff;
+}
+
+body.dark .toggle-btn:hover,
+body.dark .bell:hover {
+  background: var(--primary);
+}
+
+/* Footer */
+body.dark .footer {
+  color: var(--text-light);
+}
+
+
+/* =========================
+   RTL MODE FIX
+========================= */
+
+body.rtl {
+  direction: rtl;
+}
+
+/* Sidebar */
+body.rtl .sidebar {
+  left: auto;
+  right: 0;
+}
+
+/* Main shift */
+body.rtl .main {
+  margin-left: 0;
+  margin-right: 270px;
+}
+
+/* Topbar */
+body.rtl .topbar {
+  flex-direction: row-reverse;
+}
+
+/* Topbar groups */
+body.rtl .topbar-right,
+body.rtl .top-buttons {
+  flex-direction: row-reverse;
+}
+
+/* Logo alignment */
+body.rtl .logo {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+/* Menu alignment */
+body.rtl .menu li a {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+/* Cards text alignment */
+body.rtl .hero,
+body.rtl .settings-card,
+body.rtl .preferences {
+  text-align: right;
+}
+
+/* Toggle rows */
+body.rtl .toggle {
+  flex-direction: row-reverse;
+}
+
+/* Inputs align */
+body.rtl input {
+  text-align: right;
+}
+
+/* Footer */
+body.rtl .footer {
+  text-align: center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+section {
+  width: 100%;
+  padding: 100px 90px;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+/* SIDEBAR */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100vh;
+  background: white;
+  border-right: 1px solid var(--border);
+  padding: 25px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 1000;
+}
+.sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 20px;
+}
+.logo {
+  display:flex;
+  align-items:center;
+  gap:5px;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  white-space: nowrap;
+}.logo img{
+    width: 50px;
+    height: 50px;
+}
+.logo a{
+    text-decoration: none;
+     color: var(--primary);
+}
+.logo span {
+  color: var(--secondary);
+}
+.menu {
+  list-style: none;
+}
+.menu li {
+  margin-bottom: 12px;
+}
+.menu li a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  padding: 14px 16px;
+  border-radius: 12px;
+  color: var(--text);
+  font-weight: 500;
+  transition: 0.3s;
+}
+.menu li a:hover,
+.menu li a.active {
+  background: var(--primary);
+  color: #fff;
+} /* MAIN */
+.main {
+  margin-left: 270px;
+  min-height: 100vh;
+} /* TOPBAR */
+.topbar {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  z-index: 999;
+}
+.profile {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--secondary);
+}
+.search-box {
+  flex: 1;
+  max-width: 500px;
+}
+.search-box input {
+  width: 100%;
+  padding: 14px 18px;
+
+  background-color: whitesmoke;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  transition: 0.3s;
+}
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.top-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.toggle-btn,
+.bell {
+  border: none;
+  background: #fff;
+  padding: 12px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  color: var(--primary);
+  box-shadow: var(--shadow);
+  transition: 0.3s;
+}
+.toggle-btn:hover,
+.bell:hover {
+  background: var(--primary);
+  color: #fff;
+}
+.bell {
+  position: relative;
+}
+.bell span {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* ===========================
+   HAMBURGER MENU
+=========================== */
+
+.menu-toggle,
+.close-sidebar{
+    display:none;
+    border:none;
+    background:var(--primary);
+    color:#fff;
+    cursor:pointer;
+}
+
+.menu-toggle{
+    width:45px;
+    height:45px;
+    border-radius:10px;
+    font-size:22px;
+}
+
+.close-sidebar{
+    position:absolute;
+    top:15px;
+    right:15px;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    font-size:20px;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.content{
+    padding:30px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    background:linear-gradient(135deg,var(--primary),#0b7fb0);
+    color:white;
+    padding:40px;
+    border-radius:20px;
+    margin-bottom:30px;
+}
+
+.hero h1{
+    font-size:36px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    color:#e2e8f0;
+}
+
+/* =========================
+   SETTINGS GRID
+========================= */
+
+.settings-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:25px;
+    margin-bottom:30px;
+}
+
+.settings-card{
+    background:whitesmoke;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+}
+
+.settings-card h2{
+    color:var(--primary);
+    margin-bottom:20px;
+}
+
+.settings-card label{
+    display:block;
+    margin-bottom:8px;
+    margin-top:15px;
+    font-weight:500;
+}
+
+.settings-card input[type="text"],
+.settings-card input[type="email"],
+.settings-card input[type="password"]{
+    width:100%;
+    padding:13px;
+    border:1px solid var(--border);
+    border-radius:12px;
+    outline:none;
+    transition:.3s;
+}
+
+.settings-card input:focus{
+    border-color:var(--primary);
+}
+
+/* =========================
+   TOGGLES
+========================= */
+
+.toggle{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:14px 0;
+    border-bottom:1px solid var(--border);
+}
+
+.toggle:last-child{
+    border-bottom:none;
+}
+
+.toggle input[type="checkbox"]{
+    width:20px;
+    height:20px;
+    accent-color:var(--primary);
+}
+
+/* =========================
+   PREFERENCES
+========================= */
+
+.preferences{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+    margin-bottom:30px;
+}
+
+.preferences h2{
+    color:var(--primary);
+    margin-bottom:20px;
+}
+
+/* =========================
+   SAVE BUTTON
+========================= */
+
+.save-btn{
+    background:var(--secondary);
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:12px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.save-btn:hover{
+   
+    transform:translateY(-2px);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+    text-align:center;
+    padding:25px;
+    color:var(--text-light);
+    border-top:1px solid var(--border);
+    margin-top:40px;
+}
+
+/* ===========================
+   IPAD PRO
+=========================== */
+
+@media (max-width: 1024px){
+
+    .sidebar{
+        transform:translateX(-100%);
+        transition:.4s ease;
+        z-index:2000;
+    }
+
+    .sidebar.active{
+        transform:translateX(0);
+    }
+
+    .main{
+        margin-left:0;
+        width:100%;
+    }
+
+    .menu-toggle,
+    .close-sidebar{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .analytics-cards{
+        grid-template-columns:repeat(3,1fr);
+    }
+}
+
+/* ===========================
+   IPAD MINI
+=========================== */
+
+@media (max-width: 768px){
+
+    .content{
+        padding:20px;
+    }
+
+    .hero h1{
+        font-size:28px;
+    }
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .analytics-cards{
+        grid-template-columns:1fr;
+    }
+
+    .chart{
+        height:280px;
+    }
+
+    .bar{
+        width:45px;
+    }
+
+    .actions{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .topbar{
+        padding:15px;
+    }
+
+    .search-box{
+        max-width:250px;
+    }
+}
+
+/* ===========================
+   SAMSUNG GALAXY S8+
+=========================== */
+
+@media (max-width: 480px){
+
+    .content{
+        padding:15px;
+    }
+
+    .hero{
+        padding:25px;
+    }
+
+    .hero h1{
+        font-size:22px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    .topbar{
+        flex-wrap:wrap;
+        gap:10px;
+    }
+
+    .profile{
+        width:50px;
+        height:50px;
+    }
+
+    .search-box{
+        width:100%;
+        max-width:100%;
+        order:3;
+    }
+
+    .stats{
+        grid-template-columns:1fr;
+    }
+
+    .analytics-cards{
+        grid-template-columns:1fr;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .actions{
+        grid-template-columns:1fr;
+    }
+
+    .chart{
+        gap:8px;
+        height:250px;
+    }
+
+    .bar{
+        width:32px;
+    }
+
+    .table-card,
+    .side-card,
+    .team{
+        overflow-x:auto;
+    }
+
+    table{
+        min-width:600px;
+    }
+
+    .sidebar{
+        width:280px;
+    }
+}

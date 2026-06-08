@@ -1,0 +1,229 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ================= VARIABLES ================= */
+:root {
+  --primary: #05668d;
+  --secondary: #ef233c;
+
+  --bg: #ffffff;
+  --text: #111111;
+  --card: #ffffff;
+  --border: #ddd;
+  --muted: #6b7280;
+}
+
+/* ================= DARK MODE ================= */
+body.dark {
+  --bg: #1e293b;
+  --text: #f8fafc;
+  --card: rgba(16, 26, 45, 0.95);
+  --border: rgba(255, 255, 255, 0.08);
+  --muted: #94a3b8;
+}
+
+/* ================= GLOBAL ================= */
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* ================= BODY ================= */
+body {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--bg);
+  color: var(--text);
+
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+/* ================= CONTAINER ================= */
+.forgot-container {
+  width: 100%;
+  max-width: 430px;
+}
+
+/* ================= CARD ================= */
+.forgot-card {
+  background: var(--card);
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--border);
+  border-radius: 25px;
+  padding: 25px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  transition: 0.3s ease;
+}
+
+/* ================= TOP BUTTONS ================= */
+.theme-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+/* THEME BUTTON */
+.theme-toggle {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 10px;
+  background: var(--secondary);
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px);
+}
+
+/* RTL BUTTON */
+.rtl-toggle {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 10px;
+  background: var(--primary);
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.rtl-toggle:hover {
+  transform: translateY(-2px);
+}
+
+/* ================= LOGO ================= */
+.logo {
+  text-align: center;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.logo h1 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.logo span:first-child {
+  color: var(--primary);
+}
+
+.logo span:last-child {
+  color: var(--secondary);
+}
+
+/* ================= HEADER ================= */
+.forgot-header {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.forgot-header h2 {
+  color: var(--text);
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.forgot-header p {
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+/* ================= INPUT ================= */
+.input-group {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.input-group input {
+  width: 100%;
+  height: 50px;
+
+  border: 1px solid var(--border);
+  border-radius: 10px;
+
+  padding: 0 18px 0 50px;
+
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+
+  font-size: 14px;
+
+  transition: 0.3s;
+}
+
+.input-group input::placeholder {
+  color: var(--muted);
+}
+
+.input-group input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 8px rgba(5, 102, 141, 0.4);
+  outline: none;
+}
+
+/* ICON */
+.icon {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--secondary);
+}
+
+/* ================= BUTTON ================= */
+.reset-btn {
+  width: 100%;
+  height: 50px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: var(--secondary);
+  color: #fff;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.reset-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* ================= BACK LOGIN ================= */
+.back-login {
+  text-align: center;
+  margin-top: 18px;
+}
+
+.back-login a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.back-login a:hover {
+  color: var(--secondary);
+}
+
+/* ================= RTL ================= */
+body.rtl {
+  direction: rtl;
+}

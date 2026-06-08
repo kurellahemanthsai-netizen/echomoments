@@ -1,21 +1,3 @@
-// DARK MODE
-
-const themeBtn = document.getElementById("theme-toggle");
-
-themeBtn.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-
-  if(document.body.classList.contains("dark")){
-    localStorage.setItem("theme", "dark");
-  } else {
-    localStorage.setItem("theme", "light");
-  }
-});
-
-if(localStorage.getItem("theme") === "dark"){
-  document.body.classList.add("dark");
-}
-
 // RTL
 
 const rtlBtn = document.getElementById("rtl-toggle");
@@ -29,8 +11,22 @@ rtlBtn.addEventListener("click", () => {
     }
 
 });
+const themeToggle = document.getElementById("theme-toggle");
 
+themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
 
+    localStorage.setItem(
+        "theme",
+        document.body.classList.contains("dark") ? "dark" : "light"
+    );
+});
+
+window.addEventListener("load", () => {
+    if(localStorage.getItem("theme") === "dark"){
+        document.body.classList.add("dark");
+    }
+});
 const hamburger = document.getElementById("hamburger");
 const closeMenu = document.getElementById("close-menu");
 const nav = document.getElementById("navMenu");

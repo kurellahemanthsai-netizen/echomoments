@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>EchoMoments</title>
+<link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+<link rel="stylesheet" href="payments.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+  rel="stylesheet"
+/>
+</head>
+<body>
+    <!-- SIDEBAR -->
+
+<div class="sidebar">
+<button class="close-sidebar" id="closeSidebar">
+    ✕
+</button>
+     <div class="logo">
+        <img src="images/logo.png" alt="">
+       <a href="index.html"> Echo<span>Moments</span></a>
+    </div>
+
+    <ul class="menu">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="bookings.html">Bookings</a></li>
+        <li><a href="clients.html">Clients</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="payments.html" class="active">Payments</a></li>
+        <li><a href="settings.html">Settings</a></li>
+        <li><a href="logout.html">Logout</a></li>
+    </ul>
+
+</div>
+
+<!-- MAIN -->
+
+<div class="main">
+
+    <!-- ================= TOPBAR ================= -->
+
+        <div class="topbar">
+            <button class="menu-toggle" id="menuToggle">☰</button>
+          <img src="images/admin.avif" alt="Profile" class="profile" />
+
+          <div class="search-box">
+            <input type="text" placeholder="Search here..." />
+          </div>
+
+          <div class="topbar-right">
+            <div class="top-buttons">
+              <!-- THEME BUTTON -->
+
+              <button class="toggle-btn" id="themeToggle">
+                <i class="fa-solid fa-moon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-fill" viewBox="0 0 16 16">
+  <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
+</svg></i>
+
+                <span class="btn-text"></span>
+              </button>
+
+              <!-- RTL BUTTON -->
+
+              <button class="toggle-btn rtl-btn" id="rtlToggle">RTL</button>
+              <button class="bell">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-bell-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"
+                  />
+                </svg>
+                <span>7</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+    <div class="content">
+
+        <!-- HERO -->
+
+        <div class="hero">
+            <h1>Pricing Management</h1>
+            <p>Manage photography packages, pricing plans and revenue performance.</p>
+        </div>
+
+        <!-- STATS -->
+
+        <div class="stats">
+
+            <div class="stat-card">
+                <h4>Total Packages</h4>
+                <h2>12</h2>
+                <span>Active Plans</span>
+            </div>
+
+            <div class="stat-card">
+                <h4>Monthly Revenue</h4>
+                <h2>₹4.8L</h2>
+                <span>+18% Growth</span>
+            </div>
+
+            <div class="stat-card">
+                <h4>Bookings</h4>
+                <h2>248</h2>
+                <span>This Month</span>
+            </div>
+
+            <div class="stat-card">
+                <h4>Popular Package</h4>
+                <h2>Gold</h2>
+                <span>Most Selected</span>
+            </div>
+
+        </div>
+
+        <!-- PRICING CARDS -->
+
+        <div class="pricing-grid">
+
+            <div class="pricing-card">
+                <h3>Basic</h3>
+                <h1>₹15,000</h1>
+                <ul>
+                    <li>4 Hours Coverage</li>
+                    <li>100 Edited Photos</li>
+                    <li>Online Gallery</li>
+                    <li>Photo Delivery</li>
+                </ul>
+                <button>Manage</button>
+            </div>
+
+            <div class="pricing-card popular">
+                <span class="badge">Most Popular</span>
+                <h3>Gold</h3>
+                <h1>₹35,000</h1>
+                <ul>
+                    <li>8 Hours Coverage</li>
+                    <li>300 Edited Photos</li>
+                    <li>Premium Album</li>
+                    <li>Drone Photography</li>
+                </ul>
+                <button>Manage</button>
+            </div>
+
+            <div class="pricing-card">
+                <h3>Luxury</h3>
+                <h1>₹75,000</h1>
+                <ul>
+                    <li>Full Day Coverage</li>
+                    <li>500+ Photos</li>
+                    <li>Cinematic Video</li>
+                    <li>Luxury Album</li>
+                </ul>
+                <button>Manage</button>
+            </div>
+
+        </div>
+
+        <!-- PACKAGE TABLE -->
+
+        <div class="table-card">
+
+            <h2>Package Overview</h2>
+
+            <table>
+
+                <tr>
+                    <th>Package</th>
+                    <th>Price</th>
+                    <th>Bookings</th>
+                    <th>Status</th>
+                </tr>
+
+                <tr>
+                    <td>Basic</td>
+                    <td>₹15,000</td>
+                    <td>65</td>
+                    <td><span class="active">Active</span></td>
+                </tr>
+
+                <tr>
+                    <td>Gold</td>
+                    <td>₹35,000</td>
+                    <td>120</td>
+                    <td><span class="active">Active</span></td>
+                </tr>
+
+                <tr>
+                    <td>Luxury</td>
+                    <td>₹75,000</td>
+                    <td>63</td>
+                    <td><span class="active">Active</span></td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        <!-- REVENUE -->
+
+        <div class="revenue">
+
+            <h2>Revenue Summary</h2>
+
+            <div class="revenue-item">
+                <p>Wedding Photography</p>
+                <span>₹2,40,000</span>
+            </div>
+
+            <div class="revenue-item">
+                <p>Pre-Wedding Shoots</p>
+                <span>₹1,20,000</span>
+            </div>
+
+            <div class="revenue-item">
+                <p>Birthday Events</p>
+                <span>₹80,000</span>
+            </div>
+
+            <div class="revenue-item">
+                <p>Corporate Events</p>
+                <span>₹40,000</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+        © 2026 EchoMoments • Pricing Dashboard
+    </div>
+
+</div>
+<script src="payments.js"></script>
+</body>
+</html>

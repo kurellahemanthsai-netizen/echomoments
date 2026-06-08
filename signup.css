@@ -1,3 +1,4 @@
+/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
@@ -5,34 +6,35 @@
   font-family: "Poppins", sans-serif;
 }
 
+/* ================= THEME VARIABLES ================= */
 :root {
   --primary: #05668d;
   --secondary: #ef233c;
-}
-.dark {
-  --backgroundcolor: white;
-  --color: black;
-}
-
-html {
-  scroll-behavior: smooth;
+  --border: #ddd;
+  --bg: #ffffff;
+  --card: rgba(255, 255, 255, 0.08);
+  --text: #ffffff;
+  --muted: #bfc6d4;
 }
 
+/* ================= DARK MODE ================= */
+body.dark {
+  --bg: #1e293b;
+  --card: rgba(15, 23, 42, 0.7);
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --border: #334155;
+}
+
+/* ================= GLOBAL FIX ================= */
+html,
 body {
+  width: 100%;
+  height: 100%;
   overflow-x: hidden;
-  background: white;
-  color: var(--text);
 }
 
-section {
-  width: 100%;
-  padding: 100px 90px;
-}
-
-img {
-  width: 100%;
-  display: block;
-}
+/* ================= BODY ================= */
 body {
   min-height: 100vh;
 
@@ -40,93 +42,83 @@ body {
   justify-content: center;
   align-items: center;
 
-  background: linear-gradient(135deg, #021526d5, #032c4aca);
-
-  overflow-x: hidden;
   padding: 20px;
+
+  background: var(--bg);
+  color: var(--text);
+
+  transition: all 0.3s ease;
 }
 
+/* ================= CONTAINER ================= */
 .signup-container {
   width: 100%;
   max-width: 500px;
 }
 
-/* CARD */
-
+/* ================= CARD ================= */
 .signup-card {
-  background: rgba(10, 20, 35, 0.92);
-  backdrop-filter: blur(15px);
+  background: var(--card);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 20px;
-  padding: 20px 22px;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+  border-radius: 25px;
+  padding: 25px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  transition: 0.3s ease;
 }
-/* ================= BUTTON WRAPPER ================= */
 
+/* ================= RTL SUPPORT ================= */
+body[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+body[dir="rtl"] .theme-wrapper {
+  justify-content: flex-start;
+}
+
+body[dir="rtl"] .form-row {
+  direction: rtl;
+}
+
+/* ================= THEME + RTL BUTTONS ================= */
 .theme-wrapper {
   display: flex;
   justify-content: flex-end;
   gap: 8px;
-
   margin-bottom: 10px;
 }
 
-/* ================= THEME BUTTON ================= */
-
-.theme-toggle {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-
+.theme-toggle,
+.rtl-toggle {
   padding: 8px 12px;
-
   border: none;
   border-radius: 10px;
-
-  background:var(--secondary);
-
-  color: #ffffff;
-
+  color: #fff;
   font-size: 12px;
   font-weight: 600;
-
   cursor: pointer;
-
-  transition: 0.4s;
+  transition: 0.3s;
 }
 
-.theme-toggle:hover {
-  transform: translateY(-2px);
+.theme-toggle {
   background: var(--secondary);
 }
 
-/* ================= RTL BUTTON ================= */
-
 .rtl-toggle {
-  padding: 8px 12px;
-
-  border: none;
-  border-radius: 10px;
-
   background: var(--primary);
-
-  color: #ffffff;
-
-  font-size: 12px;
-  font-weight: 600;
-
-  cursor: pointer;
-
-  transition: 0.4s;
 }
 
+.theme-toggle:hover,
 .rtl-toggle:hover {
-  background: var(--primary);
   transform: translateY(-2px);
 }
-
-/* LOGO */
-
+body.dark .signup-card {
+  background: var(--card);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+}
+/* ================= LOGO ================= */
 .logo {
   text-align: center;
   margin-bottom: 8px;
@@ -134,7 +126,7 @@ body {
 }
 
 .logo h1 {
-   font-size: 28px;
+  font-size: 28px;
   font-weight: 700;
 }
 
@@ -146,27 +138,23 @@ body {
   color: var(--secondary);
 }
 
-/* HEADER */
-
+/* ================= HEADER ================= */
 .signup-header {
   text-align: center;
   margin-bottom: 15px;
 }
 
 .signup-header h2 {
-  color: #fff;
+  color: var(--primary);
   font-size: 24px;
-  margin-bottom: 4px;
 }
 
 .signup-header p {
-  color: #bfc6d4;
-  line-height: 1.5;
+  color: var(--muted);
   font-size: 12px;
 }
 
-/* FORM */
-
+/* ================= FORM ================= */
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -178,24 +166,23 @@ body {
 }
 
 .form-group label {
-  display: block;
-  color: #fff;
-  margin-bottom: 4px;
+  color: #1e293b;
   font-size: 13px;
-  font-weight: 500;
+  margin-bottom: 4px;
+  display: block;
 }
-
+body.dark .form-group label {
+  color: #ffffff;
+}
 .form-group input {
   width: 100%;
   height: 40px;
-  border: none;
-  outline: none;
   border-radius: 8px;
-  padding: 0 12px;
+  border: 1px solid rgb(32, 32, 32);
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  color: #fff;
-  font-size: 13px;
+
+  padding: 0 12px;
+  outline: none;
   transition: 0.3s;
 }
 
@@ -204,30 +191,25 @@ body {
   box-shadow: 0 0 8px rgba(5, 102, 141, 0.4);
 }
 
-.form-group input::placeholder {
-  color: #bfc6d4;
-}
-
-/* TERMS */
-
+/* ================= TERMS ================= */
 .terms {
   display: flex;
-  align-items: center;
-  gap: 8px;
-  color: #fff;
-  margin-bottom: 12px;
-  font-size: 12px;
   flex-wrap: wrap;
+  gap: 8px;
+  color: black;
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+body.dark .terms {
+  color: #fff;
 }
 
 .terms a {
   color: var(--secondary);
   text-decoration: none;
-  font-weight: 600;
 }
 
-/* BUTTON */
-
+/* ================= BUTTON ================= */
 .signup-btn {
   width: 100%;
   height: 42px;
@@ -235,23 +217,21 @@ body {
   border-radius: 8px;
   background: var(--secondary);
   color: #fff;
-  font-size: 14px;
   font-weight: 600;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .signup-btn:hover {
-   transform: translateY(-3px);
+  transform: translateY(-3px);
 }
 
-/* DIVIDER */
-
+/* ================= DIVIDER ================= */
 .divider {
   display: flex;
   align-items: center;
   margin: 15px 0;
-  color: #bfc6d4;
+  color: var(--muted);
   font-size: 11px;
 }
 
@@ -263,12 +243,7 @@ body {
   background: rgba(255, 255, 255, 0.12);
 }
 
-.divider span {
-  margin: 0 10px;
-}
-
-/* SOCIAL LOGIN */
-
+/* ================= SOCIAL ================= */
 .social-login {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -276,32 +251,66 @@ body {
 }
 
 .social-btn {
-  height: 40px;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(255, 255, 255, 0.05);
-  color: #fff;
-  font-size: 13px;
-  cursor: pointer;
-  transition: 0.3s;
+  padding: 10px;
+  border: 1px solid var(--border);
+  background: transparent;
+  border-radius: 10px;
+}
+body.dark .social-btn {
+  color: white;
 }
 
-.social-btn:hover {
-  
-  transform: translateY(-3px);
-}
-
-/* LOGIN LINK */
-
+/* ================= LOGIN LINK ================= */
 .login-link {
   text-align: center;
   margin-top: 12px;
-  color: #bfc6d4;
   font-size: 12px;
+  color: var(--muted);
 }
 
 .login-link a {
   color: var(--secondary);
-  text-decoration: none;
-  font-weight: 600;
+}
+
+/* ===================================================
+   📱 MEDIA QUERIES
+=================================================== */
+
+/* Galaxy S8+ */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+    align-items: flex-start;
+  }
+
+  .signup-card {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .signup-header h2 {
+    font-size: 20px;
+  }
+}
+
+/* iPad Mini */
+@media (max-width: 768px) {
+  .signup-card {
+    max-width: 90%;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* iPad Pro */
+@media (max-width: 1024px) {
+  .signup-card {
+    max-width: 80%;
+  }
 }

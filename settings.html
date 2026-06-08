@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EchoMoments</title>
+<link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+<link rel="stylesheet" href="settings.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+  rel="stylesheet"
+/>
+</head>
+<body>
+    <!-- SIDEBAR -->
+
+<div class="sidebar">
+     <button class="close-sidebar" id="closeSidebar">
+    ✕
+</button>
+     <div class="logo">
+        <img src="images/logo.png" alt="">
+       <a href="index.html"> Echo<span>Moments</span></a>
+    </div>
+
+    <ul class="menu">
+        <li><a href="dashboard.html"> Dashboard</a></li>
+        <li><a href="bookings.html"> Bookings</a></li>
+        <li><a href="clients.html"> Clients</a></li>
+        <li><a href="gallery.html"> Gallery</a></li>
+        <li><a href="payments.html"> Payments</a></li>
+        <li><a href="settings.html" class="active">Settings</a></li>
+        <li><a href="logout.html"> Logout</a></li>
+    </ul>
+
+</div>
+
+<!-- MAIN -->
+
+<div class="main">
+
+   <!-- ================= TOPBAR ================= -->
+
+        <div class="topbar">
+            <button class="menu-toggle" id="menuToggle">☰</button>
+          <img src="images/admin.avif" alt="Profile" class="profile" />
+
+          <div class="search-box">
+            <input type="text" placeholder="Search here..." />
+          </div>
+
+          <div class="topbar-right">
+            <div class="top-buttons">
+              <!-- THEME BUTTON -->
+
+              <button class="toggle-btn" id="themeToggle">
+                <i class="fa-solid fa-moon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-fill" viewBox="0 0 16 16">
+  <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
+</svg></i>
+
+                <span class="btn-text"></span>
+              </button>
+
+              <!-- RTL BUTTON -->
+
+              <button class="toggle-btn rtl-btn" id="rtlToggle">RTL</button>
+              <button class="bell">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-bell-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"
+                  />
+                </svg>
+                <span>7</span>
+              </button>
+            </div>
+          </div>
+        </div>
+          <!-- CONTENT -->
+
+    <div class="content">
+
+        <div class="hero">
+            <h1>Settings</h1>
+            <p>Manage your account, studio details, security and website preferences.</p>
+        </div>
+
+        <div class="settings-grid">
+
+            <!-- Profile -->
+
+            <div class="settings-card">
+
+                <h2>Profile Settings</h2>
+
+                <label>Full Name</label>
+                <input type="text" value="Admin User">
+
+                <label>Email Address</label>
+                <input type="email" value="admin@echomoments.com">
+
+                <label>Phone Number</label>
+                <input type="text" value="+91 9876543210">
+
+            </div>
+
+            <!-- Studio -->
+
+            <div class="settings-card">
+
+                <h2>Studio Information</h2>
+
+                <label>Studio Name</label>
+                <input type="text" value="EchoMoments">
+
+                <label>Studio Email</label>
+                <input type="email" value="contact@echomoments.com">
+
+                <label>Location</label>
+                <input type="text" value="Hyderabad, India">
+
+            </div>
+
+            <!-- Notifications -->
+
+            <div class="settings-card">
+
+                <h2>Notification Settings</h2>
+
+                <div class="toggle">
+                    <span>Email Notifications</span>
+                    <input type="checkbox" checked>
+                </div>
+
+                <div class="toggle">
+                    <span>Booking Alerts</span>
+                    <input type="checkbox" checked>
+                </div>
+
+                <div class="toggle">
+                    <span>Payment Notifications</span>
+                    <input type="checkbox">
+                </div>
+
+            </div>
+
+            <!-- Security -->
+
+            <div class="settings-card">
+
+                <h2>Security Settings</h2>
+
+                <label>Current Password</label>
+                <input type="password">
+
+                <label>New Password</label>
+                <input type="password">
+
+                <label>Confirm Password</label>
+                <input type="password">
+
+            </div>
+
+        </div>
+
+        <!-- Preferences -->
+
+        <div class="preferences">
+
+            <h2>Website Preferences</h2>
+
+            <div class="toggle">
+                <span>Dark Mode</span>
+                <input type="checkbox">
+            </div>
+
+            <div class="toggle">
+                <span>Auto Backup</span>
+                <input type="checkbox" checked>
+            </div>
+
+            <div class="toggle">
+                <span>Enable Analytics</span>
+                <input type="checkbox" checked>
+            </div>
+
+        </div>
+
+        <button class="save-btn">
+            Save Changes
+        </button>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+        © 2026 EchoMoments • Settings Dashboard
+    </div>
+
+</div>
+<script src="settings.js"></script>
+</body>
+</html>
